@@ -1,0 +1,28 @@
+﻿@{
+    ViewData["Title"] = "Grades Page";
+}
+
+<div class="text-center">
+    <div>
+        <h2>Grades Journal</h2>
+        <table>
+            <tr>
+                <td><p>StudentId</p></td>
+                <td><p>SubjectId</p></td>
+                <td><p>Date</p></td>
+            </tr>
+            @{
+                foreach (var i in ViewBag.Grades)
+                {
+                    <tr>
+                        <td><p>@i.StudentId</p></td>
+                        <td><p>@i.SubjectId</p></td>
+                        <td><p>@i.Price</p></td>
+                        <td><p><a href = "/Home/Student/@i.StudentId">Check Student's Data</a></p></td>
+                    </tr>
+                }
+            }
+        </table>
+    </div>
+
+</div>
